@@ -1,20 +1,45 @@
-function hamburgerMenu() {
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-  const list = document.getElementById("list");
-  const hamburgerMenuClose = document.getElementById("hamburgerMenuClose");
+document.addEventListener("DOMContentLoaded", () => {});
 
-  hamburgerMenu.addEventListener("click", () => {
-    list.style.left = "0px";
-    hamburgerMenuClose.style.left = "380px";
-  });
+const hamburgerMenuClose = document.getElementById("hamburgerMenuClose");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+const body = document.getElementById("body");
+const line1 = document.getElementById("line1");
+const line2 = document.getElementById("line2");
+const line3 = document.getElementById("line3");
+let isFalse = false;
 
-  hamburgerMenuClose.addEventListener("click", () => {
+hamburgerMenu.addEventListener("click", () => {
+  if (!isFalse) {
+    const list = document.getElementById("list");
+    list.style.left = "0";
+    body.style.opacity = "30%";
+    hamburgerMenu.style.left = "280px";
+    hamburgerMenu.style.position = "relative";
+    line2.style.display = "none";
+    setTimeout(() => {
+      line1.style.position = "absolute";
+    }, 200);
+    line1.style.transform = "rotate(50deg)";
+    line3.style.transform = "rotate(-50deg)";
+
+    isFalse = true;
+  } else {
     list.style.left = "";
     hamburgerMenuClose.style.left = "";
-  });
-}
+    body.style.opacity = "1";
+    hamburgerMenu.style.left = "0px";
+    hamburgerMenu.style.position = "relative";
+    line1.style.transform = "rotate(0)";
+    line3.style.transform = "rotate(0)";
+    line1.style.position = "relative";
 
-hamburgerMenu();
+    setTimeout(() => {
+      line2.style.display = "block";
+    }, 400);
+
+    isFalse = false;
+  }
+});
 
 const dataCardService = [
   {

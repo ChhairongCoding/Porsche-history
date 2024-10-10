@@ -18,6 +18,7 @@ body {
   width: 100%;
   height: auto;
   position: relative;
+  overflow: hidden;
 }
 
 header {
@@ -49,26 +50,21 @@ header .nav .navication-left .hamburger-menu {
   font-size: 22px;
   cursor: pointer;
   align-content: center;
-  text-align: center;
   border-radius: 4px;
-  transition: all ease-in-out 200ms;
+  transition: all ease-in-out 500ms;
+}
+
+header .nav .navication-left .hamburger-menu .line {
+  width: 28px;
+  height: 4px;
+  display: block;
+  margin-bottom: 5px;
+  background-color: antiquewhite;
+  transition: all ease-in-out 500ms;
 }
 
 header .nav .navication-left .hamburger-menu:active {
   background-color: #19292b;
-}
-
-header .nav .navication-left .hamburger-menu .line {
-  background-color: aqua;
-  display: block;
-  content: "";
-  width: 50px;
-  height: 4x;
-}
-
-header .nav .navication-left .sideLeft ul {
-  padding: 50px 10px 0px 0px;
-  width: 100%;
 }
 
 header .nav .navication-left .sideLeft {
@@ -82,21 +78,9 @@ header .nav .navication-left .sideLeft {
   transition: all ease-in-out 500ms;
 }
 
-header .nav .navication-left .sideLeft .hamburger-menu-close {
-  color: ghostwhite;
-  position: absolute;
-  left: -300px;
-  top: 30px;
-  font-family: sans-serif;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all ease-in-out 500ms;
-  width: 30px;
-  text-align: center;
-  z-index: 1;
-}
-header .nav .navication-left .sideLeft .hamburger-menu-close:hover {
-  background-color: #19292b;
+header .nav .navication-left .sideLeft ul {
+  padding: 50px 10px 0px 0px;
+  width: 100%;
 }
 
 header .nav .navication-left ul li {
