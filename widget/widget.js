@@ -6,6 +6,8 @@ const body = document.getElementById("body");
 const line1 = document.getElementById("line1");
 const line2 = document.getElementById("line2");
 const line3 = document.getElementById("line3");
+const logo = document.getElementById("logo");
+const search = document.getElementById("search");
 let isFalse = false;
 
 hamburgerMenu.addEventListener("click", () => {
@@ -13,9 +15,13 @@ hamburgerMenu.addEventListener("click", () => {
     const list = document.getElementById("list");
     list.style.left = "0";
     body.style.opacity = "30%";
+    body.style.filter = "blur(1.5rem)";
+    logo.style.filter = "blur(1.5rem)";
+    search.style.filter = "blur(1.5rem)";
     hamburgerMenu.style.left = "280px";
     hamburgerMenu.style.position = "relative";
     line2.style.display = "none";
+
     setTimeout(() => {
       line1.style.position = "absolute";
     }, 200);
@@ -32,6 +38,9 @@ hamburgerMenu.addEventListener("click", () => {
     line1.style.transform = "rotate(0)";
     line3.style.transform = "rotate(0)";
     line1.style.position = "relative";
+    body.style.filter = "blur(0)";
+    logo.style.filter = "blur(0)";
+    search.style.filter = "blur(0)";
 
     setTimeout(() => {
       line2.style.display = "block";

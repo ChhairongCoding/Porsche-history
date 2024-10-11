@@ -32,9 +32,11 @@
             </div>
             <div class="sideLeft" id="list">
               <ul>
-                <li><a href="?#">Home</a></li>
-                <li><a href="/widget/model.html">Models</a></li>
-                <li><a href="/widget/service.html">Servies</a></li>
+                <li><a href="#">Home</a></li>
+                <li onclick="window.location.href='model.html'">
+                  <a>Models</a>
+                </li>
+                <li><a>Servies</a></li>
                 <li><a href="#">Experience</a></li>
                 <li><a href="#">My Porsche</a></li>
                 <li><a href="#">Vehicle Purchase</a></li>
@@ -43,16 +45,25 @@
             </div>
           </div>
           <div class="logo-contain">
-            <h3 class="logo"><a href="/">Porsche</a></h3>
+            <h3 class="logo" id="logo"><a href="/">Porsche</a></h3>
           </div>
-          <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="search" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
         </div>
       </header>
 
       <main id="body">
         <div class="hero">
           <div class="image-hero index">
-            <img src="images/Porsch911Legend.avif" alt="" />
+            <!-- <img src="images/Porsch911Legend.avif" alt="" /> -->
+            <video autoplay muted loop>
+              <source
+                src="/video/On track in the new Porsche 911 GT3 RS.mp4"
+                type="video/mp4"
+              />
+            </video>
+
             <div class="blur"></div>
           </div>
           <div class="history-911">
