@@ -132,6 +132,10 @@ main {
   position: relative;
   transition: all ease-in-out 500ms;
 }
+.slideshow-container {
+  height: 720px;
+  position: relative;
+}
 
 main .hero {
   width: 100%;
@@ -591,7 +595,7 @@ main .section-4 .wrapper .row:nth-child(1) .col:nth-child(1) img {
   cursor: grabbing;
 }
 
-.section-2.slide .wrapper .slider .card {
+.section-2.slides .wrapper .slider .card {
   color: #000;
   position: relative;
   width: 600px;
